@@ -155,7 +155,8 @@ void cutSeparators(string text, char canonizedText[])
 		}
 	}
 	
-	canonizedText[index] = TERMINAL_NULL;
+	canonizedText[index] = SPACE;
+	canonizedText[index+1] = TERMINAL_NULL;
 }
 
 void cutWrongWords(char canonizedText[])
@@ -167,7 +168,7 @@ void cutWrongWords(char canonizedText[])
 		if (canonizedText[i] != SPACE) {
 			word += canonizedText[i];
 			
-			if (canonizedText[i + 1] == SPACE or canonizedText[i + 1] == TERMINAL_NULL) {
+			if (canonizedText[i + 1] == SPACE) {
 				if (!isSmallWord(word) and !isWrongWord(word)) {
 					int wordLength = getLength(word);
 				
