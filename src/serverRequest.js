@@ -14,7 +14,6 @@ const MAX_PERCENTAGE = 100;
 const CLASS_BTN_DISABLED = "btn_disabled";
 const SEND_BTN_TITLE = `Enter at least ${MIN_WORDS_COUNT} words!`;
 
-infoTextArea.disabled = true;
 sendButton.classList.add(CLASS_BTN_DISABLED);
 sendButton.title = SEND_BTN_TITLE;
 
