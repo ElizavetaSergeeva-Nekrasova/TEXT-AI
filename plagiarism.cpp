@@ -44,8 +44,11 @@ double antiPlagiarism(string text, string fragment)
 		return 0.0;
 	}
 	
-	char canonizedText[TEXT_LENGTH];
-	char canonizedFragment[FRAGMENT_LENGTH];
+	const int TEXT_ARRAY_LENGTH = TEXT_LENGTH + 2;
+	const int FRAGMENT_ARRAY_LENGTH = FRAGMENT_LENGTH + 2;
+	
+	char canonizedText[TEXT_ARRAY_LENGTH];
+	char canonizedFragment[FRAGMENT_ARRAY_LENGTH];
 
 	canonize(text, canonizedText);
 	canonize(fragment, canonizedFragment);
@@ -155,8 +158,9 @@ void cutSeparators(string text, char canonizedText[])
 		}
 	}
 	
-	canonizedText[index] = SPACE;
-	canonizedText[index+1] = TERMINAL_NULL;
+	index++;
+	canonizedText[index-1] = SPACE;
+	canonizedText[index] = TERMINAL_NULL;
 }
 
 void cutWrongWords(char canonizedText[])
