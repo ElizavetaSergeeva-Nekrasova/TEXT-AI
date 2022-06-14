@@ -263,12 +263,9 @@ textarea::-webkit-scrollbar-track {
     height: 106%;
   }
 
-  .header__title {
-    text-shadow: none;
-  }
-
   .header__subtitle {
     font-size: 1.5rem;
+    text-shadow: none;
   }
 
   .main {
@@ -291,6 +288,7 @@ textarea::-webkit-scrollbar-track {
   
   .header__title {
     font-size: 3.125rem;
+    text-shadow: none;
   }
 
   .main {
