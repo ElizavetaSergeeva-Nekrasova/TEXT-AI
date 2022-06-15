@@ -6,10 +6,10 @@
 
 using namespace std;
 
-const char server[] = "sql11.freesqldatabase.com";
-const char user[] = "sql11499492";
-const char password[] = "CfdQE5M6VX";
-const char database[] = "sql11499492";
+const char server[] = "127.0.0.1";
+const char user[] = "root";
+const char password[] = "root";
+const char database[] = "TEXT_AI";
 const char sqlQuery[] = "SELECT Id, Content  FROM EDocs WHERE TypeId IN (2,3);";
 
 string getDb()
