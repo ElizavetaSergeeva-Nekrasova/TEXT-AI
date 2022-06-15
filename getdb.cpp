@@ -24,7 +24,7 @@ string getDb()
     conn = mysql_init(NULL);
 
     if (conn != NULL) {
-        conn = mysql_real_connect(conn, server, user, password, database, 3306, NULL, 0);
+        conn = mysql_real_connect(conn, server, user, password, database, 33060, NULL, 0);
     }
 
     qstate = mysql_query(conn, sqlQuery);
