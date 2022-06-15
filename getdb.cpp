@@ -6,10 +6,10 @@
 
 using namespace std;
 
-const char server[] = "149.100.208.25";
-const char user[] = "root";
-const char password[] = "root";
-const char database[] = "TEXT_AI";
+const char server[] = "sql11.freesqldatabase.com";
+const char user[] = "sql11499492";
+const char password[] = "CfdQE5M6VX";
+const char database[] = "sql11499492";
 const char sqlQuery[] = "SELECT Id, Content  FROM EDocs WHERE TypeId IN (2,3);";
 
 string getDb()
@@ -24,7 +24,7 @@ string getDb()
     conn = mysql_init(NULL);
 
     if (conn != NULL) {
-        conn = mysql_real_connect(conn, server, user, password, database, 33060, NULL, 0);
+        conn = mysql_real_connect(conn, server, user, password, database, 3306, NULL, 0);
     }
 
     qstate = mysql_query(conn, sqlQuery);
